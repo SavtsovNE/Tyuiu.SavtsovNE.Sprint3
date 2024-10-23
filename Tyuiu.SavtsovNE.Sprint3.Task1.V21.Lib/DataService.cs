@@ -12,20 +12,29 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
             double multSeries = 1;
+
             while (startValue <= stopValue)
             {
                 double currentVal = (0.5 + (startValue / 5.0)) / (Math.Cos(value) + 0.5);
+
+                // Проверка на отрицательные значения
+                if (currentVal < 0)
+                {
+                    Console.WriteLine($"Текущее значение отрицательное: {currentVal}. Устанавливаем в 0.");
+                    currentVal = 0; // Или другое значение по вашему усмотрению
+                }
+
                 double powVal = Math.Pow(currentVal, 3);
                 multSeries *= powVal;
 
+                // Вывод промежуточных значений
                 Console.WriteLine($"StartValue: {startValue}, CurrentVal: {currentVal}, PowVal: {powVal}, MultSeries: {multSeries}");
 
                 startValue++;
             }
+
             return Math.Round(multSeries, 3);
         }
-
     }
-
 }
 
