@@ -2,7 +2,7 @@
 
 namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
 {
-    public class DataService : ISprint3Task1V21
+    public class DataService : ISprint3Task1V23
     {
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
