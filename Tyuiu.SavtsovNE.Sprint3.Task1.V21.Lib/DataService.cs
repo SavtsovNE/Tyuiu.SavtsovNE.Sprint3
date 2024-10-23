@@ -14,7 +14,7 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
             double multSeries = 1;
             while (startValue <= stopValue)
             {
-                double currentVal = (0.5 + (startValue / 5)) / (Math.Cos(value) + 0.5);
+                double currentVal = (0.5 + (startValue / 5.0)) / (Math.Cos(value) + 0.5);
                 double powVal = Math.Pow(currentVal, 3);
                 multSeries *= powVal;
 
@@ -26,4 +26,6 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
         }
 
     }
+
 }
+
