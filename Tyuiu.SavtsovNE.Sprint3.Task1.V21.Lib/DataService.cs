@@ -15,7 +15,7 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
             while (startValue <= stopValue)
             {
                 multSeries *= Math.Pow((0.5 + (startValue / 5)) / (Math.Cos(value) + 0.5), 3);
-                startValue++;
+                startValue++ ;
             }
             return Math.Round(multSeries, 3);
         }
