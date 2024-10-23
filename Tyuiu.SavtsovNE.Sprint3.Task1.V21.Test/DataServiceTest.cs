@@ -11,9 +11,9 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Test
         public void ValidGetMultiplySeries()
         {
             DataService ds = new DataService();
-            int value = 0.5;
+            int value = 1;
             int startValue = 1;
-            int stopValue = 20;
+            int stopValue = 15;
             double res = ds.GetMultiplySeries(value, startValue, stopValue);
             double wait = 99.512;
             Assert.AreEqual(wait, res);

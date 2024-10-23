@@ -14,8 +14,11 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
             double multSeries = 1;
             while (startValue <= stopValue)
             {
-                multSeries *= Math.Pow((0.5 + (startValue / 5)) / (Math.Cos(value) + 0.5), 3);
-                startValue++;
+                //multSeries *= Math.Pow((0.5 + (startValue / 5)) / (Math.Cos(value) + 0.5), 3);
+                //startValue++;
+                multSeries *= Math.Pow((0.5 + (startValue / 4)) / (Math.Cos(value) + 0.3), 3);
+
+
             }
             return Math.Round(multSeries, 3);
         }
