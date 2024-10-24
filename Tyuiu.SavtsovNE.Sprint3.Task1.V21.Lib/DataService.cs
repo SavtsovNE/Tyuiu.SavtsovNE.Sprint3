@@ -24,13 +24,13 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
 
             for (int i = startValue; i <= stopValue; i++)
             {
-                // Пример формулы
+                // Предполагаемая формула, измените ее в соответствии с вашими требованиями
                 double term = (0.5 + (i / 5.0)) / (Math.Cos(value) + 0.5);
 
-                // Проверяем, чтобы не было деления на ноль
-                if (double.IsInfinity(term ) || double.IsNaN(term))
+                // Проверяем на деление на ноль
+                if (Math.Abs(Math.Cos(value) + 0.5) < 1e-10)
                 {
-                    return 0; // Или другое значение, если возникает ошибка
+                    throw new InvalidOperationException("Деление на ноль!");
                 }
 
                 multSeries *= term;
@@ -38,8 +38,8 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
 
             return Math.Round(multSeries, 3);
         }
+
+
+
     }
-
-    
-
 }
