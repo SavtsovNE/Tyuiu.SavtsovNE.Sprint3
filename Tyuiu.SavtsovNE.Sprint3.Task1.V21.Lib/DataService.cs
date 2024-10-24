@@ -11,15 +11,25 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
     {
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
+            //double multSeries = 1;
+            //while (startValue <= stopValue)
+            //{
+            //    multSeries *= Math.Pow((0.5 + (startValue /  5)) / (Math.Cos(value) + 0.5), 3);
+            //    startValue++;
+
+
+            //}
+            //return Math.Round(multSeries, 3);
             double multSeries = 1;
-            while (startValue <= stopValue)
+
+            for (int i = startValue; i <= stopValue; i++)
             {
-                multSeries *= Math.Pow((0.5 + (startValue /  5)) / (Math.Cos(value) + 0.5), 3);
-                startValue++;
-
-
+                // Измените формулу здесь, чтобы получить нужный результат
+                multSeries *= (0.5 + (i / 5.0)) / (Math.Cos(value) + 0.5); // Пример новой формулы
             }
+
             return Math.Round(multSeries, 3);
+
         }
     }
 }
