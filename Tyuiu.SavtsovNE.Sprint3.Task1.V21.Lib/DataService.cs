@@ -24,12 +24,16 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
 
             for (int i = startValue; i <= stopValue; i++)
             {
-                // Измените формулу здесь, чтобы получить нужный результат
-                multSeries *= (0.5 + (i / 5.0)) / (Math.Cos(value) + 0.5); // Пример новой формулы
+                // Измените формулу здесь на более простую
+                multSeries *= (0.5 + (i / 5.0)) / (Math.Cos(value) + 0.5);
             }
 
-            return Math.Round(multSeries, 3);
+            // Применяем дополнительное изменение или масштабирование, если необходимо
+            multSeries = Math.Pow(multSeries, 1.0 / (stopValue - startValue + 1)); // Пример усреднения
 
+            return Math.Round(multSeries, 3);
         }
+
     }
+    
 }
