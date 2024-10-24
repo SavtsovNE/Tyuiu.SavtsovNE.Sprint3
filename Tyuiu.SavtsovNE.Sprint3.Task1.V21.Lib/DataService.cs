@@ -11,31 +11,14 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
     {
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
-            //double multSeries = 1;
-            //while (startValue <= stopValue)
-            //{
-            //    multSeries *= Math.Pow((0.5 + (startValue /  5)) / (Math.Cos(value) + 0.5), 3);
-            //    startValue++;
-
-
-            //}
-            //return Math.Round(multSeries, 3);
             double multSeries = 1;
-
-            for (int i = startValue; i <= stopValue; i++)
+            while (startValue <= stopValue)
             {
-                // Предполагаемая формула, измените ее в соответствии с вашими требованиями
-                double term = (0.5 + (i / 5.0)) / (Math.Cos(value) + 0.5);
+                multSeries *= Math.Pow((0.5 + (startValue / 5)) / (Math.Cos(value) + 0.5), 3);
+                startValue++;
 
-                // Проверяем на деление на ноль
-                if (Math.Abs(Math.Cos(value) + 0.5) < 1e-10)
-                {
-                    throw new InvalidOperationException("Деление на ноль!");
-                }
 
-                multSeries *= term;
             }
-
             return Math.Round(multSeries, 3);
         }
 
