@@ -28,7 +28,7 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task1.V21.Lib
                 double term = (0.5 + (i / 5.0)) / (Math.Cos(value) + 0.5);
 
                 // Проверяем, чтобы не было деления на ноль
-                if (double.IsInfinity(term) || double.IsNaN(term))
+                if (double.IsInfinity(term ) || double.IsNaN(term))
                 {
                     return 0; // Или другое значение, если возникает ошибка
                 }
