@@ -22,7 +22,7 @@ namespace Tyuiu.SavtsovNE.Sprint3.Task4.V3.Lib
                 sum = sum + ((Math.Cos(i) + Math.Sin(i)) / i);
 
             }
-            return sum;
+            return Math.Round (sum,3);
         }
     }
 }
